@@ -17,7 +17,7 @@
   --red:           #E53935;
   --amber:         #F59E0B;
   --blue:          #1565C0;
-  --sidebar-w:     260px;
+  --sidebar-w:     290px;
   --header-h:      60px;
   --radius-card:   16px;
   --radius-btn:    8px;
@@ -133,6 +133,9 @@ body {
   position: fixed;
   left: 0; top: var(--header-h); bottom: 0;
   width: var(--sidebar-w);
+  height: 524px;
+  min-height: 524px;
+  max-height: 524px;
   background: var(--sidebar-bg);
   border-right: 1px solid var(--border);
   overflow-y: auto;
@@ -148,12 +151,15 @@ body {
 
 .nav-item {
   display: flex; align-items: center; gap: 12px;
-  padding: 11px 14px;
+  width: 257px;
+  height: 44px;
+  padding: 0 14px;
   border-radius: 10px;
   text-decoration: none;
   color: var(--text-mid);
   font-size: 14px; font-weight: 500;
   transition: background .15s, color .15s;
+  flex-shrink: 0;
 }
 .nav-item svg {
   width: 18px; height: 18px;
