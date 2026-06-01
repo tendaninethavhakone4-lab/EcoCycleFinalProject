@@ -82,9 +82,11 @@ body {
   letter-spacing: -0.03em;
   line-height: 1;
 }
+ 
 .ecocycle-wordmark .eco {
   color: #3a9e3f;
 }
+ 
 .ecocycle-sub {
   font-size: 0.7rem;
   color: var(--muted);
@@ -113,10 +115,21 @@ body {
   cursor: pointer;
   border: none;
   background: none;
-  font-family: "DM Sans", sans-serif;
+  font-family: 'DM Sans', sans-serif;
+  color: var(--muted);
+  transition: color 0.2s;
 }
+ 
 .topbar-logout:hover {
   color: var(--primary);
+}
+ 
+.topbar-logout svg {
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2;
 }
 
 /* ── LAYOUT (identical to EmployeeDashboard.css) ── */
