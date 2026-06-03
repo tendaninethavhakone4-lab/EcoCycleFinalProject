@@ -1,4 +1,5 @@
 const { createClient } = require('@supabase/supabase-js');
+const ws = require('ws');
 require('dotenv').config();
 
 const USE_MOCK = (process.env.USE_MOCK || "false").toLowerCase() === "true";
@@ -10,6 +11,7 @@ if (!USE_MOCK) {
   } else {
     supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_SERVICE_ROLE_KEY, {
       auth: { autoRefreshToken: false, persistSession: false },
+      realtime: { transport: ws },
     });
   }
 }
