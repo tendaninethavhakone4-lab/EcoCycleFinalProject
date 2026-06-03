@@ -1,6 +1,6 @@
 const API_BASE = (() => {
   const h = window.location.hostname;
-  return (!h || h === 'localhost' || h === '127.0.0.1') ? 'http://localhost:4000' : '';
+  return (!h || h === 'localhost' || h === '127.0.0.1') ? 'http://localhost:4000' : 'https://ecocycleprojectfinal-1.onrender.com';
 })();
 
 let pendingAction = null;
