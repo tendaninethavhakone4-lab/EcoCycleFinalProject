@@ -1,4 +1,7 @@
-const REWARDS_API_URL = 'http://localhost:4000/api';
+const REWARDS_API_URL = (() => {
+  const h = window.location.hostname;
+  return (!h || h === 'localhost' || h === '127.0.0.1') ? 'http://localhost:4000/api' : '/api';
+})();
 const REWARDS_XP_PER_LEVEL = 1000;
 let rewardsCurrentXP = 0;
 let rewardsCurrentPickerId = null;

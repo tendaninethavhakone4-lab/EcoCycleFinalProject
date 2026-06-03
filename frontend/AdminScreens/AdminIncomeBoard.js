@@ -1,4 +1,7 @@
-const ADMIN_INCOME_API_URL = 'http://localhost:4000/api';
+const ADMIN_INCOME_API_URL = (() => {
+  const h = window.location.hostname;
+  return (!h || h === 'localhost' || h === '127.0.0.1') ? 'http://localhost:4000/api' : '/api';
+})();
 
 let adminIncomeCentreChart = null;
 let adminIncomeMaterialChart = null;
